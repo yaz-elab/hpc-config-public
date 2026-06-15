@@ -36,4 +36,10 @@ slurm_timer() {
     fi
 }
 export PS1='$(slurm_timer)[${debian_chroot:+($debian_chroot)}\[\033[1;37m\]\u@\h\[\033[00m\] \[\033[1;90m\]\w\[\033[00m\]]\$ '
+
+# Useful aliases
+alias res='echo Plotting residuals...; ./tools/plotSolver > /dev/null 2>&1'
+alias probes='echo Plotting probes...; ./tools/plotProbes > /dev/null 2>&1'
+alias intakes='./tools/plotIntakes'
+
 EOF
